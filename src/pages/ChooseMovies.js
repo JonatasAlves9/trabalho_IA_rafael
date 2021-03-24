@@ -1,7 +1,19 @@
+import React, { useEffect } from 'react'
 import logo from '../logo.svg';
 import '../App.css';
+import tree from '../services/tree'
+
+const arvore = {};
 
 function ChooseMovies() {
+
+  useEffect(() => {
+    tree(arvore, 10);
+    tree(arvore, 11);
+    tree(arvore, 9);
+    console.log(arvore)
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
